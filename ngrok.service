@@ -6,7 +6,9 @@ After=network.target
 ExecStart=/opt/ngrok/ngrok start --all --config /opt/ngrok/ngrok.yml
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
-Restart=on-failure
+IgnoreSIGPIPE=true
+Restart=always
+RestartSec=3
 Type=simple
 
 [Install]
