@@ -21,5 +21,7 @@ cd /opt/ngrok
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
 unzip ngrok-stable-linux-amd64.zip
 
+chmod +x ngrok
+
 systemctl enable ngrok.service
 systemctl start ngrok.service
