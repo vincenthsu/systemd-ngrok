@@ -1,5 +1,15 @@
 #!/usr/bin/env bash
 
+if [ ! $(which wget) ]; then
+    echo 'Please install wget package'
+    exit 1
+fi
+
+if [ ! $(which unzip) ]; then
+    echo 'Please install zip package'
+    exit 1
+fi
+
 if (( $EUID != 0 )); then
     echo "Please run as root"
     exit 1
