@@ -5,6 +5,11 @@ if [ ! $(which wget) ]; then
     exit 1
 fi
 
+if [ ! $(which git) ]; then
+    echo 'Please install git package'
+    exit 1
+fi
+
 if [ ! $(which unzip) ]; then
     echo 'Please install zip package'
     exit 1
