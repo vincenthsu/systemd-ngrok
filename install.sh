@@ -33,6 +33,8 @@ cp ngrok.service /lib/systemd/system/
 mkdir -p /opt/ngrok
 cp ngrok.yml /opt/ngrok
 sed -i "s/<add_your_token_here>/$1/g" /opt/ngrok/ngrok.yml
+sed -i "s/<region>/$2/g" /opt/ngrok/ngrok.yml
+sed -i "s/<socks5_port>/$3/g" /opt/ngrok/ngrok.yml
 
 cd /opt/ngrok
 wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-arm.zip
