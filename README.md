@@ -20,5 +20,5 @@ or just execute `install.sh` on Linux x64 platform.
 ```
     curl -O https://raw.githubusercontent.com/vincenthsu/systemd-ngrok/master/install.sh
     chmod +x install.sh
-    sudo ./install.sh <your_authtoken>
+    sudo ./install.sh <your_authtoken> <region> <socks5_port>
 ```
