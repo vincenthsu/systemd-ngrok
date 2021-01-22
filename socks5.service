@@ -1,0 +1,18 @@
+[Unit]
+Description=socks5
+After=network.target
+
+[Service]
+ExecStart=/opt/ngrok/socks5
+ExecReload=/bin/kill -HUP $MAINPID
+KillMode=process
+IgnoreSIGPIPE=true
+Restart=always
+RestartSec=3
+Type=simple
+Environment="PROXY_USER=<PROXY_USER>"
+Environment="PROXY_PASSWORD=<PROXY_PASSWORD>"
+Environment="PROXY_PORT=<PROXY_PORT>"
+
+[Install]
+WantedBy=multi-user.target
