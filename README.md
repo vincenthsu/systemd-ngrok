@@ -1,24 +1,9 @@
-# Installation
+## Installation
 
-Step 1: Place [`ngrok`](https://ngrok.com/download) in `/opt/ngrok/`.
+1. Clone this repository to the target machine (eg: Raspberry Pi)
+2. Get your `authtoken` from ngrok website
+3. Inspect and modify the configuration file `ngrok.yml`, by default this config will use _Asia Pacific_ region to serve both **HTTP** and **TCP** tunnels
+4. Run `sudo ./install.sh <your_authtoken>`, replace `<your_authtoken>` with the token you've obtained before from ngrok website.
+5. You're good to go!
 
-Step 2: Get `authtoken` from ngrok website, then add it to `/opt/ngrok/ngrok.yml`.
-
-Step 3. Modify your own configrations in `/opt/ngrok/ngrok.yml`.
-
-Step 4: Add `ngrok.service` to `/lib/systemd/system/`.
-
-Step 5: Start ngrok service by typing:
-
-```
-    systemctl enable ngrok.service
-    systemctl start ngrok.service
-```
-
-or just execute `install.sh` on Linux x64 platform.
-
-```
-    curl -O https://raw.githubusercontent.com/vincenthsu/systemd-ngrok/master/install.sh
-    chmod +x install.sh
-    sudo ./install.sh <your_authtoken>
-```
+_NB : this repository is forked from [vincenthsu/systemd-ngrok](https://github.com/vincenthsu/systemd-ngrok) with architecture auto-detect feature_
