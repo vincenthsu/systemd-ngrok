@@ -1,7 +1,7 @@
-authtoken: <add_your_token_here>
+authtoken: <23qAhkL6QYXcxEYh2nLYdRY6NBG_QaK7R5yvv4MFp1Q8mgty>
 # region: ap
 tunnels:
-  ssh:
+  ssh:ssh -R 443:localhost:80 tunnel.us.ngrok.com http
     proto: tcp
     addr: 22
 #  myapp-http:
