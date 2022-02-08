@@ -6,4 +6,6 @@
 4. Run `sudo ./install.sh <your_authtoken>`, replace `<your_authtoken>` with the token you've obtained before from ngrok website.
 5. You're good to go!
 
-_NB : this repository is forked from [vincenthsu/systemd-ngrok](https://github.com/vincenthsu/systemd-ngrok) with architecture auto-detect feature_
+## Acknowledgements
+
+Ngrok architecture auto detection was contributed by [David Eleazar](https://github.com/elzdave).
