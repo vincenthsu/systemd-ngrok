@@ -41,9 +41,10 @@ if [ -z "$1" ]; then
 fi
 
 if [ ! -e ngrok.service ]; then
-    git clone --depth=1 https://github.com/elzdave/systemd-ngrok.git
+    git clone --depth=1 https://github.com/vincenthsu/systemd-ngrok.git
     cd systemd-ngrok
 fi
+
 cp ngrok.service /lib/systemd/system/
 mkdir -p /opt/ngrok
 cp ngrok.yml /opt/ngrok
