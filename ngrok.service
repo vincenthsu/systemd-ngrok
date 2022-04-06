@@ -3,7 +3,7 @@ Description=ngrok
 After=network.target
 
 [Service]
-ExecStart=/opt/ngrok/ngrok start --all --config /opt/ngrok/ngrok.yml
+ExecStart=/opt/ngrok/ngrok start --all --config /opt/ngrok/ngrok.yml --log stdout
 ExecReload=/bin/kill -HUP $MAINPID
 KillMode=process
 IgnoreSIGPIPE=true
