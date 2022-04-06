@@ -1,4 +1,7 @@
 authtoken: <add_your_token_here>
+log_level: info
+log_format: term
+log: /opt/ngrok/ngrok.log
 region: ap
 tunnels:
   web:
