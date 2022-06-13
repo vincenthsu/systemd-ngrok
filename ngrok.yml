@@ -1,9 +1,9 @@
+version: "2"
 authtoken: <add_your_token_here>
-region: ap
 tunnels:
-  web:
-    proto: http
-    addr: 80
-  ssh:
-    proto: tcp
-    addr: 22
+    web:
+        proto: http
+        addr: 80
+    ssh:
+        proto: tcp
+        addr: 22

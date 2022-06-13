@@ -15,6 +15,9 @@ else
     ARCH=arm
 fi
 
+ARCHIVE=ngrok-v3-stable-linux-$ARCH.zip
+DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
+
 if [ ! $(which wget) ]; then
     echo 'Please install wget package'
     exit 1
@@ -52,9 +55,9 @@ sed -i "s/<add_your_token_here>/$1/g" /opt/ngrok/ngrok.yml
 
 cd /opt/ngrok
 echo "Downloading ngrok for $ARCH . . ."
-wget https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-$ARCH.zip
-unzip ngrok-stable-linux-$ARCH.zip
-rm ngrok-stable-linux-$ARCH.zip
+wget $DOWNLOAD_URL
+unzip $ARCHIVE
+rm $ARCHIVE
 chmod +x ngrok
 
 systemctl enable ngrok.service
