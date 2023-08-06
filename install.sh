@@ -15,7 +15,7 @@ else
     ARCH=arm
 fi
 
-ARCHIVE=ngrok-v3-stable-linux-$ARCH.zip
+ARCHIVE=ngrok-v3-stable-linux-$ARCH.tgz
 DOWNLOAD_URL=https://bin.equinox.io/c/bNyj1mQVY4c/$ARCHIVE
 
 if [ ! $(which wget) ]; then
@@ -25,11 +25,6 @@ fi
 
 if [ ! $(which git) ]; then
     echo 'Please install git package'
-    exit 1
-fi
-
-if [ ! $(which unzip) ]; then
-    echo 'Please install zip package'
     exit 1
 fi
 
@@ -56,7 +51,7 @@ sed -i "s/<add_your_token_here>/$1/g" /opt/ngrok/ngrok.yml
 cd /opt/ngrok
 echo "Downloading ngrok for $ARCH . . ."
 wget $DOWNLOAD_URL
-unzip $ARCHIVE
+tar xzf $ARCHIVE
 rm $ARCHIVE
 chmod +x ngrok
 
