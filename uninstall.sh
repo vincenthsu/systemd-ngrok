@@ -1,7 +1,9 @@
 #!/usr/bin/env bash
 
 if (( $EUID != 0 )); then
-    echo "Please run as root"
+    echo "Usage: sudo bash uninstall.sh"
+    echo "_____"
+    echo "ERROR: Please run as root."
     exit 1
 fi
 

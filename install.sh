@@ -29,12 +29,16 @@ if [ ! $(which git) ]; then
 fi
 
 if (( $EUID != 0 )); then
-    echo "Please run as root"
+    echo "Usage: sudo bash install.sh [your_authtoken]"
+    echo "_____"
+    echo "ERROR: Please run as root."
     exit 1
 fi
 
-if [ -z "$1" ]; then
-    echo "./install.sh <your_authtoken>"
+if [ -z "$1" ]; 
+    echo "Usage: sudo bash install.sh [your_authtoken]"
+    echo "_____"
+    echo "ERROR: You must supply an authentication token as an argument."
     exit 1
 fi
 
